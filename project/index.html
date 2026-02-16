@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pastel 9x9 Sudoku</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-bg"></div>
+
+  <div class="floating-window" id="floating">
+    <div class="header" id="dragHandle">
+          <div class="title">
+            <img src="download.jpg" alt="palette" class="thumb">
+            <div>
+              <div class="main">Playful 9×9</div>
+              <div class="sub">Classic Sudoku — pastel & friendly</div>
+            </div>
+          </div>
+      <div class="controls">
+        <button id="minBtn" class="icon" title="Minimize">—</button>
+        <button id="closeBtn" class="icon" title="Close">×</button>
+        <button id="newBtn" class="btn">New</button>
+        <select id="difficulty" class="btn ghost" aria-label="Difficulty">
+          <option value="easy">Easy</option>
+          <option value="medium" selected>Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+        <button id="checkBtn" class="btn ghost">Check</button>
+        <button id="hintBtn" class="btn ghost">Hint</button>
+        <button id="solveBtn" class="btn ghost">Solve</button>
+      </div>
+    </div>
+
+    <div class="board-wrap">
+      <div class="grid" id="grid"></div>
+    </div>
+
+    <div class="palette" id="palette">
+      <button class="pbtn" data-val="1">1</button>
+      <button class="pbtn" data-val="2">2</button>
+      <button class="pbtn" data-val="3">3</button>
+      <button class="pbtn" data-val="4">4</button>
+      <button class="pbtn" data-val="5">5</button>
+      <button class="pbtn" data-val="6">6</button>
+      <button class="pbtn" data-val="7">7</button>
+      <button class="pbtn" data-val="8">8</button>
+      <button class="pbtn" data-val="9">9</button>
+      <button class="pbtn clear" data-val="0">Erase</button>
+    </div>
+
+    <div class="meta">Tip: click a cell, then choose a number. Drag window by the header.</div>
+  </div>
+
+  <script src="app.js"></script>
+  <button id="dock" class="dock hidden">Open Sudoku</button>
+</body>
+</html>
